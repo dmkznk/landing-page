@@ -594,6 +594,24 @@ form button {
 }
 
 
+.left-arrow  {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right-arrow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel-item-arrow {
+    color: tomato;
+}
+
+.carousel-slides-ico li {
+    border: 1px solid tomato;
+    background: tomato;
+}
 
 
 
