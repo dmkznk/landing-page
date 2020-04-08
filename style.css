@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-a:hover {
+a:hover, a {
     text-decoration: none;
     color: grey;
 }
@@ -94,6 +94,18 @@ form button {
     background-color: #ff5c36;
 }
 
+@media screen and (max-width:1025px) {
+    form button {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:770px) {
+    form button {
+        padding: 10px 11px;
+        font-size: 15px;
+    }
+}
 @media screen and (max-width:568px) {
     .main-section1 {
         padding-top: 20px;
@@ -138,11 +150,9 @@ form button {
     }
 }
 @media screen and (max-width:380px) {
-
     .logo p {
         font-size: 15px;
         border: 3px solid  rgba(0, 0, 0, 0.6);
-        
     }
 
     .nav-icon {
@@ -244,12 +254,15 @@ form button {
     background-color: #f74770;
 }
 .red-card i {
-    transform: rotate(-20deg);
+    transform: rotate(-20deg);  
 }
 
+@media screen and (max-width: 1025px) {
+    .cards {
+        flex-basis: 35%;
+    }
+}
 @media screen and (max-width:568px) {
-  
-
     .cards {
         padding: 10px;
         flex-basis: 40%;
@@ -297,6 +310,7 @@ form button {
         bottom: -16px;
     }
 }
+
 /* =========================================/section2============================================ */
 
 /* =========================================section3============================================= */
@@ -315,13 +329,24 @@ form button {
     width: 100%;
 }
 
+.homer-blocs {
+    flex-basis: 31%;
+    width: 100%;
+}
+
 .img-containers {
-    height: 31%;
-    width: 31%;
+    flex-basis: 31%;
     background-color: #ff5c36;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: all .45s;
+    margin: 2px;
+}
+
+.img-containers:hover {
+    flex-basis: 45%;
+    margin: 0 30px;
 }
 
 .simpson1 {
@@ -423,6 +448,11 @@ form button {
     background-size: contain;
 }
 
+@media screen and (max-width:770px) {
+    .content-wrap h3::before {
+        bottom: -3px;
+    }
+}
 @media screen and (max-width:568px) {
     .container-section4 {
         padding-top: 40px;
@@ -479,7 +509,6 @@ form button {
         display: none;
 }
 }
-
 @media screen and (max-width:374px) {
     .container-section4 {
         padding-top: 30px;
@@ -522,12 +551,19 @@ form button {
     margin: 30px 0;
 }
 
-.member-cards-op0 {
+.member-cards {
     position: relative;
     flex-basis: 30%;
     background-color: #fff3f0;
     padding: 10px 30px;
     min-height: 50vh;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: all .45s;
+}
+
+.member-cards:hover {
+    box-shadow: 0 0 49px rgba(20, 20, 21, 0.11);
 }
 
 .member-name {
@@ -552,8 +588,10 @@ form button {
     left: 0;
     background-color:  #ff5c36;
     background-image: url(./img/homer.png);
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+    box-shadow: 0 0 2px rgba(20, 20, 21, 0.6);
     transition: all .45s;
 }
 
@@ -562,11 +600,11 @@ form button {
     background-color: #fff;
     position: absolute;
     bottom: -30px;
+    padding: 10px 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.05);
-
 }
 
 .orange-fade:hover {
@@ -575,7 +613,7 @@ form button {
 
 .progress-wrap {
     width: 60%;
-    height: 30%;
+    height: 50%;
     align-self: center;
     justify-content: flex-end;
 }
@@ -586,12 +624,254 @@ form button {
     font-size: 15px;
 }
 
-
-/*https://developer.mozilla.org/ru/docs/Web/CSS/:nth-child*/
-
 .progress:nth-child(2n) {
     margin-bottom: 10px;
 }
+
+@media screen and (max-width:1025px) {
+    .member-name-fade h3 {
+        font-size: 26px;
+    }
+
+    .member-cards {
+        min-height: 25vh;
+        flex-basis: 30%;
+    }
+}
+@media screen and (max-width:568px) {
+    .member-card-media-display-non {
+        display: none;
+    }
+
+    .member-cards {
+        min-height: 25vh;
+        flex-basis: 47%;
+    }
+
+    .member-name {
+        margin-top: 15px;
+    }
+
+    .member-name-fade {
+        bottom: -30px;
+    }
+
+    .progress-wrap {
+        width: 80%;
+        height: 50%;
+        align-self: center;
+        justify-content: flex-end;
+    }
+
+    .member-cards h3, i {
+       font-size: 13px;
+    }
+
+    .member-cards i {
+        margin: 0 1px;
+    }
+    
+    .member-cards span {
+        font-size: 9px;
+    }
+
+    .progress-wrap p {
+        font-size: 10px;
+    }
+}
+/* =========================================/section5=============================================== */
+
+/* =========================================section6================================================ */
+.main-section6 {
+    padding: 50px 0;
+}
+
+.whole-carosel {
+    margin: 30px 0;
+}
+
+.calosel-navigation-icons {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: 1px 3px 14px rgba(20, 20, 21, 0.08);
+}
+
+.calosel-navigation-icons:hover {
+    background-color: #ff6e47;
+}
+
+.carousel-indicators li {
+    border-bottom: 4px #ff6e47 solid;
+}
+
+.carosel-content-wrap {
+    padding: 35px;
+}
+
+.slider-content {
+    text-align: center;
+    padding: 50px 30px 30px 30px;
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background-image: url(./img/incognito-512.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    border: black solid 1px;
+}
+
+.stars {
+    margin-bottom: 15px;
+    color: #ffef3b;
+}
+
+.stars i {
+    transition: all .20s;
+}
+.stars i:hover {
+    font-size: 20px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.position {
+    font-style: italic;
+}
+
+.slider-content:hover {
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.05);
+}
+
+.whole-carosel-media {
+    display: none;
+}
+
+@media screen and (max-width:568px) {
+    .whole-carosel {
+        display: none;
+    }
+    .whole-carosel-media {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .slider-content p {
+        font-size: 11px;
+    }
+    .slider-content span {
+        font-size: 13px;
+    }
+}
+/* =========================================/section6================================================ */
+
+/* =========================================section7================================================= */
+.main-section7-part1 {
+    background-color: #fbfbfb;
+}
+
+.animal-icons-wrap i {
+    color: #d3d3d3;
+    font-size: 30px;
+    margin: 50px 0;
+}
+
+.main-section7-part2 {
+    background-color: #f7f7f7;
+    padding: 50px 0 40px 0;
+}
+
+.last-button {
+    padding: 15px 0;
+    width: 20%;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px solid rgba(1, 2, 2, 0.07);
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.last-button:hover {
+    box-shadow: 2px 11px 20px rgba(20, 20, 21, 0.07);
+}
+
+.social-media-icons-and-text {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.main-section7-part2 .row i {
+    height: 50px;
+    width: 50px;
+    border-radius: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    background-color: #d3d3d3;
+    color: white;
+}
+
+.main-section7-part2 .row i:hover {
+    box-shadow: 0 0 23px rgba(20, 20, 21, 0.29);
+    background-color: #ff6e47;
+}
+
+.main-section7-part2 .row span {
+    color:  grey;
+}
+
+@media screen and (max-width:568px) {
+    
+    .main-section7-part2 {
+        padding: 25px 0;
+}
+
+    .last-button {
+        padding: 7px 0;
+        width: 60%;
+        margin-bottom: 25px;
+}
+
+    .social-media-icons-and-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+   .main-section7-part2 .row i {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+    .main-section7-part2 span {
+    font-size: 10px;
+}
+}
+/* =========================================/section7================================================= */
+
+
+
+
+
 
 
 
